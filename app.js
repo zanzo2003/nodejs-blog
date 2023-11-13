@@ -1,14 +1,20 @@
-import "dotenv/config";
-import express from "express";
+require("dotenv").config();
+const express = require("express");
+const expressLayout = require("express-ejs-layouts");
 
 
 const port = 3000 || process.env.PORT;
 const app = express();
 
+app.use(express.static("public"));
 
-app.get("/", (req, res)=>{
-    res.send("Home page");
-});
+//Templating engine
+app.use(expressLayout);
+app.set("view engine", "ejs");
+app.set("layout", "./layout/main")
+
+
+app.use("/", require("./server/routes/main"));
 
 
 app.listen(port, ()=>{
