@@ -2,30 +2,42 @@ const express = require("express");
 
 const app = express();
 const router = express.Router();
-app.set("view engine", "ejs");
+const post = require("../models/post");
 
-router.get("/", (req, res)=>{
-    const data = {
+app.set("view engine", "ejs");
+const desc = "This is a blog website, where people can create account, write, read and edit their blogs";
+
+router.get("/", async(req, res) => {
+
+   try {
+    const articleData = await post.find();
+    res.render("index.ejs", {
         title: "Home",
-        descrption: "This is a blog website, where people can create account, write, read and edit their blogs"
-    }
-    res.render("index.ejs", data);
+        descrption: desc,
+        article: articleData
+    });
+    
+   } catch (error) {
+    console.log(error);
+    
+   }
 });
 
-router.get("/about", (req, res)=>{
+router.get("/about", (req, res) => {
     const data = {
         title: "About",
-        descrption: "This is a blog website, where people can create account, write, read and edit their blogs"
+        descrption: desc
     }
     res.render("about.ejs", data);
 });
 
-router.get("/contact", (req, res)=>{
+router.get("/contact", (req, res) => {
     const data = {
         title: "Contacts",
-        descrption: "This is a blog website, where people can create account, write, read and edit their blogs"
+        descrption: desc
     }
     res.render("contact.ejs", data);
 });
+
 
 module.exports = router;

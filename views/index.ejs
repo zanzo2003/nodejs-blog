@@ -11,12 +11,14 @@
     <h2 class="article__heading">Latest Articles</h2>
 
     <ul class="article__ul">
+        <% article.forEach(value => { %>
         <li>
-            <a href="#">
-                <span>Post title</span>
-                <span class="article-list__date">Date</span>
+            <a href="/post/<%= value._id %>">
+                <span><%= value.title %></span>
+                <span class="article-list__date"><%= value.createdAt.toDateString() %></span>
             </a>
         </li>
+   <% }); %>
     </ul>
 
     <a href="#" class="pagination"> &lt; View Older Posts</a>
