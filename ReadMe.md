@@ -22,10 +22,15 @@ This is a simple blog website built using Node.js, Express, EJS, and MongoDB for
    ```bash
    git clone <repo-http>
    cd simple-blog
-2. ** Dependancies
-    - open terminal and type "npm install" for installing all dependancies locally.
 
-3.** To run application
-   - type npm run dev on CLI for running the application
+2. **Dependancies:**
+    - open the terminal and type for installing all dependancies locally.
+      ```bash
+      npm install
 
-The .env file is not included so please fill in variable accordingly
+3. **To run application:**
+   - type on CLI for running the application
+    ```bash
+   -npm run dev 
+
+## The .env file is not included so please fill in variable accordingly
