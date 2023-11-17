@@ -8,18 +8,20 @@
 <img src="/img/hero-img.jpeg" alt="lofi-tech-main-img" class="hero_img">
 
 <section class="articles">
-    <h2 class="article__heading">Latest Articles</h2>
-
-    <ul class="article__ul">
-        <% article.forEach(value => { %>
+    <h2 class="articles__heading">Latest Posts</h2>
+  
+    <ul class="article-ul">
+      <% data.forEach(post => { %>
         <li>
-            <a href="/post/<%= value._id %>">
-                <span><%= value.title %></span>
-                <span class="article-list__date"><%= value.createdAt.toDateString() %></span>
-            </a>
+          <a href="/post/<%= post._id %>">
+            <span><%= post.title %></span>
+            <span class="article-list__date"><%= post.createdAt.toDateString() %></span>
+          </a>
         </li>
-   <% }); %>
+      <% }) %>
     </ul>
-
-    <a href="#" class="pagination"> &lt; View Older Posts</a>
-</section>
+  
+  
+    <% if (nextPage !== null) { %>
+      <a href="/?page=<%= nextPage %>" class="pagination">&lt; View Older Posts</a>
+    <% } %>

@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;600&display=swap");
 
 :root {
-  --pink: #ff4b91;
+  --pink: #f63982;
   --green: #a6ff96;
   --blue: #9eddff;
   --font-size-base: 1rem;
@@ -28,12 +28,17 @@ a {
 }
 h1 {
   font-size: var(--font-size-xl);
+  text-shadow: 1px 1px 2px #2aff04;
 }
 h2 {
   font-size: var(--font-size-lg);
+  text-shadow: 1px 1px 2px #2aff04;
 }
 h3 {
   font-size: var(--font-size-md);
+}
+p{
+  text-shadow: 1px 1px 2px #2aff04;
 }
 
 input[type="text"],
@@ -69,6 +74,7 @@ textarea {
 img {
   width: 100%;
   height: auto;
+  box-shadow: 1px 1px 16px 15px var(--pink);
 }
 
 /* Layout */
@@ -144,10 +150,16 @@ img {
   font-weight: 600;
   font-family: "Pixelify Sans", sans-serif;
   color: white;
+  box-shadow: 0px 10px 16px rgb(2, 170, 253, 1);
+  border: 2px solid var(--pink);
+  transition: box-shadow 0.25s;
+}
+
+.header__button button:active{
+  box-shadow: 0px 5px 5px rgb(2, 170, 253, 1);
 }
 
 .header__button button:hover {
-  border: 2px solid var(--pink);
   color: var(--green);
 }
 
@@ -282,12 +294,13 @@ img {
   
   .searchBar.open {
     transform: translateY(0);
-    transition: transform 0.1s;
+    transition: transform 0.7s;
   }
   
   .searchBar input {
     margin: 0;
     border: 0;
+    font-family: "Pixelify Sans", sans-serif;
   }
   
   #searchClose {
@@ -295,8 +308,14 @@ img {
     top: 1rem;
     right: 10rem;
     color: var(--green);
-    padding: 15px;
+    padding: 11px;
     cursor: pointer;
+    margin-top: 1.7px;
+    background-color: var(--pink);
+    text-shadow: 1px 1px 2px #2aff04;
+    box-shadow: 1px 1px 16px 3px var(--pink);
+    border: 1px solid #f70763;
+    border-radius: 10px;
   }
   
   
@@ -306,6 +325,7 @@ img {
     text-decoration: none;
     margin-top: 40px;
     display: inline-block;
+    text-shadow: 1px 1px 2px #2aff04;
   }
   
   .pagination:hover {
