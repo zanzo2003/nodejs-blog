@@ -112,10 +112,13 @@ img {
   font-size: 25px;
   text-decoration: none;
   grid-area: logo;
+  padding: 5px;
+  text-align: center;
 }
 
 .header__logo:hover {
-  text-decoration: underline;
+  box-shadow: 0px 1px 20px var(--pink);
+  border-radius: 10px;
 }
 
 .header__nav {
@@ -182,7 +185,8 @@ img {
 }
 
 .header__nav ul a:hover {
-  text-decoration: underline;
+  box-shadow: 0px 1px 20px var(--pink);
+  border-radius: 10px;
 }
 
 /* Author - HomePage */
