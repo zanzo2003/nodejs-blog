@@ -21,7 +21,7 @@ This is a simple blog website built using Node.js, Express, EJS, and MongoDB for
 
    ```bash
    git clone <repo-http>
-   cd simple-blog
+   cd nodejs-blog
 
 2. **Dependancies:**
     - open the terminal and type for installing all dependancies locally.
