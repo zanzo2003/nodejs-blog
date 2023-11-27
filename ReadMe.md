@@ -31,6 +31,6 @@ This is a simple blog website built using Node.js, Express, EJS, and MongoDB for
 3. **To run application:**
    - type on CLI for running the application
     ```bash
-   -npm run dev 
+   -node app.js
 
 ## The .env file is not included so please fill in variable accordingly
