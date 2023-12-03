@@ -4,8 +4,15 @@ const app = express();
 const router = express.Router();
 const Post = require("../models/post");
 
+
 app.set("view engine", "ejs");
 const desc = "This is a blog website, where people can create account, write, read and edit their blogs";
+
+router.use((req, res, next) => {
+    // changing layout for my home panel
+    req.app.set('layout', '../views/layout/main');
+    next();
+});
 
 
 
@@ -36,7 +43,7 @@ router.get('', async (req, res) => {
             data,
             current: page,
             nextPage: hasNextPage ? nextPage : null,
-            currentRoute: '/'
+            currentRoute: '/',
         });
 
     } catch (error) {
@@ -103,19 +110,6 @@ router.post('/search', async (req, res) => {
     }
   
   });
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 router.get("/about", (req, res) => {
