@@ -357,7 +357,7 @@ img {
   padding: 12px 15px;
   border: 2px solid var(--green);
   color: var(--green);
-  box-shadow: 2px 4px 5px 5px rgb(246, 57, 130, 0.5);
+  box-shadow: 2px 4px 5px 5px rgba(246, 57, 130, 0.5);
   transition: box-shadow 0.5s ease-in;
 }
 #login-submit:active {
@@ -401,4 +401,79 @@ img {
 .btn:hover {
   color: var(--green);
   border-color: var(--pink);
+}
+
+.about{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.about-header{
+  flex: 1;
+}
+.about-middle{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.about-img{
+  width: 40%;
+}
+.about-img img{
+  max-width: 600px;
+  height: auto;
+}
+.about-body{
+  width: 50%;
+  margin: 30px;
+  color: var(--pink);
+}
+.about-body p{
+  text-shadow: 0 0 3px #FF0000;
+  line-height: 20px;
+}
+.about-info{
+  margin-top: 30px;
+}
+.info{
+  width: 300px;
+  height: 100px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 16px 15px var(--blue);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.info a img{
+  width: 55px;
+  height: 50px;
+  box-shadow: none;
+  border-radius: 2px;
+  transition: box-shadow .15s, background-color .15s;
+}
+.info a img:hover{
+  box-shadow: 1px 1px 16px 7px var(--blue);
+  background-color: rgba(158, 221, 255, 0.75);
+}
+
+
+@media(max-width: 900px){
+
+  .about-middle{
+    flex-direction: column;
+  }
+
+  .about-middle img{
+    width: 100%;
+    height: 200px;
+  }
+  .about-body{
+    margin: 30px 0 0 0;
+
+  }
+
 }

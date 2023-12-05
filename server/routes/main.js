@@ -1,5 +1,5 @@
 const express = require("express");
-const nodemailer = require("nodemailer");
+const sendMail = require('../controllers/sendMail');
 
 const app = express();
 const router = express.Router();
@@ -135,9 +135,7 @@ router.get("/contact", (req, res) => {
 
 // contact me route
 
-router.post('/contact-mail', (req, res)=>{
-
-})
+router.post('/contact-mail', sendMail);
 
 
 
