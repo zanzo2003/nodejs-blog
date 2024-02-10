@@ -1,6 +1,6 @@
 #  MyBlog Website
 
-This is a simple blog website built using Node.js, Express, EJS, and MongoDB for storing blog posts.
+This repository consists the source code to MyBlog, which is my Blog website hosted on vercel and render.
 
 ## Features
 
